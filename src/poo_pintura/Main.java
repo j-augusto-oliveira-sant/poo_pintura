@@ -23,7 +23,6 @@ public class Main {
 		double ab = scan.nextDouble();
 		System.out.println("h");
 		double h = scan.nextDouble();
-		Piramide piramide = new Piramide(ab,h);
 		System.out.println("Tipo de tinta 1,2,3:");
 		int tinta = scan.nextInt();
 		double preco_tinta = 0;
@@ -34,15 +33,10 @@ public class Main {
 		} else {
 			preco_tinta = 344.34f;
 		}
-		piramide.setPreco_tinta(preco_tinta);
-		System.out.println("Area Triangulo: "+piramide.getArea_triangulo_lado());
-		System.out.println("Area Base: "+piramide.getArea_base_piramide());
-		System.out.println("Area Total: "+piramide.getArea_total_piramide());
-		System.out.println("Tipo de tinta: "+tinta);
-		System.out.println("Litros: "+piramide.getLitros());
-		System.out.println("Latas: "+piramide.getLatas());
-		System.out.println("Preço: "+piramide.getPreco_total());
-		System.out.println("Volume: "+piramide.getVolume_piramide());
+		
+		Piramide piramide = new Piramide(ab,h,preco_tinta);
+		
+		System.out.println(piramide);
 		scan.close();
 	}
 	public static void ex2() throws Exception {
